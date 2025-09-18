@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedTest Pro - Internet Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">SpeedTest Pro</h1>
+            <p class="header__subtitle">Test your internet connection speed</p>
+        </div>
+    </header>
+
+    <!-- Main Speed Test Interface -->
+    <main class="main">
+        <div class="container">
+            <div class="speed-test">
+                <!-- Speed Test Card -->
+                <div class="speed-test__card">
+                    <!-- Speedometer Display -->
+                    <div class="speedometer">
+                        <div class="speedometer__circle">
+                            <div class="speedometer__progress"></div>
+                            <div class="speedometer__content">
+                                <div class="speed-display">
+                                    <span class="speed-display__value" id="speedValue">0</span>
+                                    <span class="speed-display__unit">Mbps</span>
+                                </div>
+                                <div class="speed-display__status" id="testStatus">Ready to test</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Control Button -->
+                    <div class="control-section">
+                        <button class="btn-start" id="startBtn">
+                            <span class="btn-start__text">Start Test</span>
+                            <div class="btn-start__loader hidden" id="btnLoader"></div>
+                        </button>
+                    </div>
+
+                    <!-- Test Progress -->
+                    <div class="progress-section hidden" id="progressSection">
+                        <div class="progress-bar">
+                            <div class="progress-bar__fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-text" id="progressText">Initializing...</div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results hidden" id="resultsSection">
+                    <h3 class="results__title">Test Results</h3>
+                    <div class="results__grid">
+                        <div class="metric-card">
+                            <div class="metric-card__icon">⬇</div>
+                            <div class="metric-card__content">
+                                <div class="metric-card__label">Download</div>
+                                <div class="metric-card__value" id="downloadResult">-- Mbps</div>
+                                <div class="metric-card__rating" id="downloadRating">--</div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-card__icon">⬆</div>
+                            <div class="metric-card__content">
+                                <div class="metric-card__label">Upload</div>
+                                <div class="metric-card__value" id="uploadResult">-- Mbps</div>
+                                <div class="metric-card__rating" id="uploadRating">--</div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-card__icon">📡</div>
+                            <div class="metric-card__content">
+                                <div class="metric-card__label">Ping</div>
+                                <div class="metric-card__value" id="pingResult">-- ms</div>
+                                <div class="metric-card__rating" id="pingRating">--</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn--secondary" id="restartBtn">Test Again</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2025 SpeedTest Pro - XI Internet Speed Testing</p>
+        </div>
+    </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
